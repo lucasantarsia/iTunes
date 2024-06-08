@@ -38,7 +38,7 @@ class DAO():
         query = """select distinctrow t.AlbumId as a1 , t2.AlbumId as a2
                 from playlisttrack p , track t , playlisttrack p2 , track t2 
                 where p2.PlaylistId = p.PlaylistId
-                and t2.TrackId = p.TrackId
+                and p2.TrackId = t2.TrackId
                 and p.TrackId = t.TrackId
                 and t.AlbumId < t2.AlbumId"""
 

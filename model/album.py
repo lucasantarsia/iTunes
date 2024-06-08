@@ -11,4 +11,7 @@ class Album:
         return hash(self.AlbumId)
 
     def __str__(self):
-        return f"{self.Title}"
+        return f"{self.Title} -- {toMinutes(self.totD)}"
+
+def toMinutes(d):
+    return d/1000/60
